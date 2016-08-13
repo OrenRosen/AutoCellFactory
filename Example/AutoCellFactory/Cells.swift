@@ -12,17 +12,23 @@ import AutoCellFactory
 
 class SomeCell: AWBasicCell<SomeCellPresenter> {
     
+    
+    @IBOutlet weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell() {
-        // Do some configureation for your cell
+    override func configureCell() {
+        
+        label.text = presenter.title
     }
 }
 
 class AnotherCell: AWBasicCell<AnotherCellPresenter> {
-    func configureCell() {
-        
+    @IBOutlet weak var label: UILabel!
+    
+    override func configureCell() {
+        label.text = presenter.title
     }
 }

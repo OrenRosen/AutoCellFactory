@@ -12,7 +12,7 @@ import AutoCellFactory
 class ViewModel: TVCFactoryViewModelable {
     
     func modelForIndexPath(indexPath: NSIndexPath) -> Any? {
-        return indexPath.row == 1 ? SomeCellModel() : AnotherCellModel()
+        return indexPath.row == 1 ? SomeCellModel(title: "somececd") : AnotherCellModel(title: "1223232323")
     }
 }
 

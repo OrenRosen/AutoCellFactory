@@ -9,8 +9,7 @@
 import Foundation
 
 
-
-public class AWBasePresenter<ModelType: Any>: AWCellPresenterer, AWModelHolder {
+public class AWBasePresenter<ModelType: Any>: AWCellPresenterer {
     
     required public init() { }
     

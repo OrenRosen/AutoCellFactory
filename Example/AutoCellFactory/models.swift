@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct SomeCellModel {
+class SomeCellModel {
+    var someName = ""
     
+    init(title: String) {
+        self.someName = title
+    }
 }
 
 class AnotherCellModel {
+    var anotherName = ""
     
+    init(title: String) {
+        self.anotherName = title
+    }
 }

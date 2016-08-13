@@ -11,11 +11,12 @@ import AutoCellFactory
 
 class SomeCellPresenter: AWBasePresenter<SomeCellModel> {
     
+    var title: String { return model?.someName ?? "" }
     required init() {}
 }
 
 class AnotherCellPresenter: AWBasePresenter<AnotherCellModel> {
-    required init() {
-        
-    }
+    
+    var title: String { return model?.anotherName ?? "" }
+    required init() {}
 }

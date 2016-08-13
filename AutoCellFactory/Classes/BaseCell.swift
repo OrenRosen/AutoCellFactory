@@ -18,7 +18,7 @@ public class AWBasicCellPresenterHolder: UITableViewCell, AWPresenterHolder {
 
 public class AWBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : AWBasicCellPresenterHolder, AWCellPresentable {
     
-    var presenter: PresenterType!
+    public var presenter: PresenterType!
     override var somePresenter: AWModelHolder? {
         get {
             return presenter
@@ -34,6 +34,10 @@ public class AWBasicCell<PresenterType: AnyObject where PresenterType: AWCellPre
         presenter.reloadView = { [weak self] in
             self?.configureCell()
         }
+    }
+    
+    public func configureCell() {
+    
     }
 }
 
@@ -58,10 +62,4 @@ protocol AWCellPresentable {
     associatedtype presenterType: AWCellPresenterer
     func configureCell()
     var presenter: presenterType! { get set }
-}
-
-extension AWCellPresentable {
-    func configureCell() {
-        
-    }
 }
