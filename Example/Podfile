@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AutoCellFactory_Example' do
+  pod 'AutoCellFactory', :path => '../'
+
+  target 'AutoCellFactory_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
