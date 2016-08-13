@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AutoCellFactory'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AutoCellFactory.'
+  s.summary          = 'Auto Create Cells.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,15 +17,13 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "AutoCellFactory is simple to use, all it does it auto deques the cell and configure it, using the MVVM architacture."
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/AutoCellFactory'
+  s.homepage         = 'https://github.com/OrenRosen/AutoCellFactory'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Oren Rosenblum' => 'oren@minutemedia.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/AutoCellFactory.git', :tag => s.version.to_s }
+  s.author           = { 'Oren Rosenblum' => 'oren363@gmail.com' }
+  s.source           = { :git => 'https://github.com/OrenRosen/AutoCellFactory.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

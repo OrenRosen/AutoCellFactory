@@ -1,0 +1,6 @@
+framework module AutoCellFactory {
+  umbrella header "AutoCellFactory-umbrella.h"
+
+  export *
+  module * { export * }
+}
