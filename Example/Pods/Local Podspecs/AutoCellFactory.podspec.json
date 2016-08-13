@@ -1,18 +1,18 @@
 {
   "name": "AutoCellFactory",
   "version": "0.1.0",
-  "summary": "A short description of AutoCellFactory.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/AutoCellFactory",
+  "summary": "Auto Create Cells.",
+  "description": "AutoCellFactory is simple to use, all it does it auto deques the cell and configure it, using the MVVM architacture.",
+  "homepage": "https://github.com/OrenRosen/AutoCellFactory",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Oren Rosenblum": "oren@minutemedia.com"
+    "Oren Rosenblum": "oren363@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/AutoCellFactory.git",
+    "git": "https://github.com/OrenRosen/AutoCellFactory.git",
     "tag": "0.1.0"
   },
   "platforms": {

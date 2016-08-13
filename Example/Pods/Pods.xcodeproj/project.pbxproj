@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		13474329D0469360454D136220E2C40C /* Pods-AutoCellFactory_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 405DCF6C60F0B268800B3C81D1CCFF23 /* Pods-AutoCellFactory_Example-dummy.m */; };
-		159BEDA350D8BB762F95D289B7D5E6D9 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93139BE3B95A1A02DA50D3F69F8D418 /* ReplaceMe.swift */; };
 		2D77FDB03951E380F813187933D7665B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		30A5D9197C1B28E87CFC486D45E0C5C1 /* Pods-AutoCellFactory_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C06622008EE9DAC03ADD5F666EE769 /* Pods-AutoCellFactory_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		314C8FBA77994B370B76485239E83119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		979FA3C2F4CDDBA7F60E5FC58985BB82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		D3D4BF3D32084CA1A55F41383EBA38EC /* AutoCellFactory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3345DA9DF50A82EEEC43B7A3C1719 /* AutoCellFactory-dummy.m */; };
+		4EE510AEF5C3A8D993606A66D627B8B0 /* TVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */; };
+		5988AB3F2D738181C878F2E9581FEF51 /* CellReuseRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD749BD832EF3D497010D9FD2EA84F8A /* CellReuseRegister.swift */; };
+		8820376448E01266EBF5B0A6AD32DB98 /* AutoCellFactoryTestingPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2914DECB839F3A8EC8EF70F178A6A9EE /* AutoCellFactoryTestingPod.swift */; };
+		9F5DECCBB85C09B8804C40C10349361E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2B3C0DB668F3ED557F47791FA647D /* BasePresenter.swift */; };
+		AF2BC88BE4B53ABE7BA9F8178B15DE58 /* AutoCellFactory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5933CEC268F6FE2CBB7CABF50AC987E /* AutoCellFactory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF5D6C92CDCA4B92BB5D9CC2746C7E34 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B6EA2415EF568B0CCE2CDE6C57408 /* BaseCell.swift */; };
+		E493E407BC8E8716A228792F1F8CA0AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F0B9CE28E5DECF4516415F23474F88E7 /* Pods-AutoCellFactory_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDDD9398B465D9291949E862E5271A /* Pods-AutoCellFactory_Tests-dummy.m */; };
-		F89FAA1DCADFCB50323538FDECA21169 /* AutoCellFactory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5933CEC268F6FE2CBB7CABF50AC987E /* AutoCellFactory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8DEA0EC30D63A44CCD31B50FFAA73AB /* AutoCellFactory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3345DA9DF50A82EEEC43B7A3C1719 /* AutoCellFactory-dummy.m */; };
 		FE298C33E82A8D8A590B3582CAEADC6B /* Pods-AutoCellFactory_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC5C174E6E84843AA8B076E4365253C /* Pods-AutoCellFactory_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,32 +28,36 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 90C0EEBE8F067B91D63D0ACE19694622;
+			remoteGlobalIDString = 32B646F1563E9702C1F1BAEA887FD3D0;
 			remoteInfo = AutoCellFactory;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		209A7A0FCB286DDF98F207A33A652BF5 /* Pods-AutoCellFactory_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AutoCellFactory_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2914DECB839F3A8EC8EF70F178A6A9EE /* AutoCellFactoryTestingPod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AutoCellFactoryTestingPod.swift; sourceTree = "<group>"; };
 		4008812B0125EA02A91F811E68740987 /* Pods-AutoCellFactory_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AutoCellFactory_Example.release.xcconfig"; sourceTree = "<group>"; };
 		405DCF6C60F0B268800B3C81D1CCFF23 /* Pods-AutoCellFactory_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AutoCellFactory_Example-dummy.m"; sourceTree = "<group>"; };
 		44C5B275E1FCA08A56A0F64AFC5B2532 /* Pods_AutoCellFactory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCellFactory_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8D3C8BF4D4A66C303020E1E5B8C8AC /* Pods-AutoCellFactory_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AutoCellFactory_Example-frameworks.sh"; sourceTree = "<group>"; };
 		59C4E402809178C3EE7ED3D1611940C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TVCFactory.swift; sourceTree = "<group>"; };
 		5C1EA223B405E0682AE5C190D3A9FDE5 /* AutoCellFactory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoCellFactory-prefix.pch"; sourceTree = "<group>"; };
 		63C06622008EE9DAC03ADD5F666EE769 /* Pods-AutoCellFactory_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AutoCellFactory_Example-umbrella.h"; sourceTree = "<group>"; };
 		84C3345DA9DF50A82EEEC43B7A3C1719 /* AutoCellFactory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AutoCellFactory-dummy.m"; sourceTree = "<group>"; };
 		8FBDDD9398B465D9291949E862E5271A /* Pods-AutoCellFactory_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AutoCellFactory_Tests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A93139BE3B95A1A02DA50D3F69F8D418 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		9D2B6EA2415EF568B0CCE2CDE6C57408 /* BaseCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		AAA56666E9C470A807C7644CAB3E0FDA /* Pods-AutoCellFactory_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AutoCellFactory_Example.modulemap"; sourceTree = "<group>"; };
 		ABC5C174E6E84843AA8B076E4365253C /* Pods-AutoCellFactory_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AutoCellFactory_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AD25CBAC72F5C1B47749AC53F3EA2F9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27209D6100A6295BE04FE8D9D7FBA6D /* Pods-AutoCellFactory_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AutoCellFactory_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B4EF08545C33FD5BF2DDEA5EF8B40958 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD749BD832EF3D497010D9FD2EA84F8A /* CellReuseRegister.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CellReuseRegister.swift; sourceTree = "<group>"; };
 		C29B3A82EB121E8B356B9B086C32A935 /* Pods_AutoCellFactory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCellFactory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D5933CEC268F6FE2CBB7CABF50AC987E /* AutoCellFactory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoCellFactory-umbrella.h"; sourceTree = "<group>"; };
+		D8D2B3C0DB668F3ED557F47791FA647D /* BasePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		DF3365BA7AB40EE8C802F7DE9705C5DC /* Pods-AutoCellFactory_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AutoCellFactory_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1473CB8DFAC4F7F8C0CBFE08EE0BA16 /* AutoCellFactory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AutoCellFactory.xcconfig; sourceTree = "<group>"; };
 		EB8A59233194D6460E3FA7E903BE83D0 /* Pods-AutoCellFactory_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AutoCellFactory_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -73,19 +81,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1051BA03B3768D87750646833E3A8749 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				979FA3C2F4CDDBA7F60E5FC58985BB82 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		410CD399A496ADB25CFA06787B163796 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2D77FDB03951E380F813187933D7665B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EFAF77C411759E688B897DDB647599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E493E407BC8E8716A228792F1F8CA0AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,14 +108,6 @@
 				C29B3A82EB121E8B356B9B086C32A935 /* Pods_AutoCellFactory_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3BE735B3E7B12C434628FEA08A766F3D /* AutoCellFactory */ = {
-			isa = PBXGroup;
-			children = (
-				FAC651D49AA1B231D94B422AB2AC8ED1 /* Classes */,
-			);
-			path = AutoCellFactory;
 			sourceTree = "<group>";
 		};
 		3C3CF4ED7A366FF23463288E3C5F25DF /* Pods-AutoCellFactory_Example */ = {
@@ -164,11 +164,23 @@
 		8404BD9D12487388E9CE169AD403055D /* AutoCellFactory */ = {
 			isa = PBXGroup;
 			children = (
-				3BE735B3E7B12C434628FEA08A766F3D /* AutoCellFactory */,
+				D8CBB51BE9B841333EB5261C45AFED7D /* AutoCellFactory */,
 				5B0620D0960F521E21C9A66C8674382A /* Support Files */,
 			);
 			name = AutoCellFactory;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		B71E9DD57A43731AD4558691748C71A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2914DECB839F3A8EC8EF70F178A6A9EE /* AutoCellFactoryTestingPod.swift */,
+				9D2B6EA2415EF568B0CCE2CDE6C57408 /* BaseCell.swift */,
+				D8D2B3C0DB668F3ED557F47791FA647D /* BasePresenter.swift */,
+				BD749BD832EF3D497010D9FD2EA84F8A /* CellReuseRegister.swift */,
+				59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -197,6 +209,14 @@
 			path = "Target Support Files/Pods-AutoCellFactory_Tests";
 			sourceTree = "<group>";
 		};
+		D8CBB51BE9B841333EB5261C45AFED7D /* AutoCellFactory */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9DD57A43731AD4558691748C71A5 /* Classes */,
+			);
+			path = AutoCellFactory;
+			sourceTree = "<group>";
+		};
 		F71EB056269321C04A13B1A6936FEAE5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,14 +232,6 @@
 				8404BD9D12487388E9CE169AD403055D /* AutoCellFactory */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		FAC651D49AA1B231D94B422AB2AC8ED1 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A93139BE3B95A1A02DA50D3F69F8D418 /* ReplaceMe.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,17 +253,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FBA27C5103DE2428439CCD1A3BFC9D1 /* Headers */ = {
+		411C1CBABFF39A1AC35FB6A34AF0A85F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F89FAA1DCADFCB50323538FDECA21169 /* AutoCellFactory-umbrella.h in Headers */,
+				AF2BC88BE4B53ABE7BA9F8178B15DE58 /* AutoCellFactory-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		32B646F1563E9702C1F1BAEA887FD3D0 /* AutoCellFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E4ED5E36C96FEB59EBBA83A775FBDAF /* Build configuration list for PBXNativeTarget "AutoCellFactory" */;
+			buildPhases = (
+				0582E18AB2A793A4DC51D280279B83A1 /* Sources */,
+				52EFAF77C411759E688B897DDB647599 /* Frameworks */,
+				411C1CBABFF39A1AC35FB6A34AF0A85F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoCellFactory;
+			productName = AutoCellFactory;
+			productReference = EE7474DA0A615D0EC191B4A19B963500 /* AutoCellFactory.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5F5B60F6CD894AEB8AC9221CD9A7F9BE /* Pods-AutoCellFactory_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F093206B57E9E19EB361AE9122340A80 /* Build configuration list for PBXNativeTarget "Pods-AutoCellFactory_Tests" */;
@@ -267,23 +296,6 @@
 			name = "Pods-AutoCellFactory_Tests";
 			productName = "Pods-AutoCellFactory_Tests";
 			productReference = C29B3A82EB121E8B356B9B086C32A935 /* Pods_AutoCellFactory_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		90C0EEBE8F067B91D63D0ACE19694622 /* AutoCellFactory */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E9419243EA42CDEEB14FED37CF6115F3 /* Build configuration list for PBXNativeTarget "AutoCellFactory" */;
-			buildPhases = (
-				8409F733C83BB76BE5726C679FD5C5AB /* Sources */,
-				1051BA03B3768D87750646833E3A8749 /* Frameworks */,
-				2FBA27C5103DE2428439CCD1A3BFC9D1 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AutoCellFactory;
-			productName = AutoCellFactory;
-			productReference = EE7474DA0A615D0EC191B4A19B963500 /* AutoCellFactory.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A14C38CC8968A4B36F84D21BB4D7EC5B /* Pods-AutoCellFactory_Example */ = {
@@ -325,7 +337,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90C0EEBE8F067B91D63D0ACE19694622 /* AutoCellFactory */,
+				32B646F1563E9702C1F1BAEA887FD3D0 /* AutoCellFactory */,
 				A14C38CC8968A4B36F84D21BB4D7EC5B /* Pods-AutoCellFactory_Example */,
 				5F5B60F6CD894AEB8AC9221CD9A7F9BE /* Pods-AutoCellFactory_Tests */,
 			);
@@ -341,12 +353,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8409F733C83BB76BE5726C679FD5C5AB /* Sources */ = {
+		0582E18AB2A793A4DC51D280279B83A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D4BF3D32084CA1A55F41383EBA38EC /* AutoCellFactory-dummy.m in Sources */,
-				159BEDA350D8BB762F95D289B7D5E6D9 /* ReplaceMe.swift in Sources */,
+				F8DEA0EC30D63A44CCD31B50FFAA73AB /* AutoCellFactory-dummy.m in Sources */,
+				8820376448E01266EBF5B0A6AD32DB98 /* AutoCellFactoryTestingPod.swift in Sources */,
+				DF5D6C92CDCA4B92BB5D9CC2746C7E34 /* BaseCell.swift in Sources */,
+				9F5DECCBB85C09B8804C40C10349361E /* BasePresenter.swift in Sources */,
+				5988AB3F2D738181C878F2E9581FEF51 /* CellReuseRegister.swift in Sources */,
+				4EE510AEF5C3A8D993606A66D627B8B0 /* TVCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,41 +380,12 @@
 		F51FBC1CBE85A2EA50B34E48814A3ACF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AutoCellFactory;
-			target = 90C0EEBE8F067B91D63D0ACE19694622 /* AutoCellFactory */;
+			target = 32B646F1563E9702C1F1BAEA887FD3D0 /* AutoCellFactory */;
 			targetProxy = 28621816C93AE59B5A9B03118695DAE6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		057482A5ADB37062B7887615C6C68A51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1473CB8DFAC4F7F8C0CBFE08EE0BA16 /* AutoCellFactory.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AutoCellFactory/AutoCellFactory-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AutoCellFactory/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AutoCellFactory/AutoCellFactory.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AutoCellFactory;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +423,36 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		2BA6C9AEB95100CED66BCE689B21E849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1473CB8DFAC4F7F8C0CBFE08EE0BA16 /* AutoCellFactory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AutoCellFactory/AutoCellFactory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AutoCellFactory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AutoCellFactory/AutoCellFactory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AutoCellFactory;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		4273CF862A54A2F7E8A26CBD213FABA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -495,6 +512,35 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_AutoCellFactory_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		911DD2BA178551D2DB1C38CB79CAD2E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1473CB8DFAC4F7F8C0CBFE08EE0BA16 /* AutoCellFactory.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AutoCellFactory/AutoCellFactory-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AutoCellFactory/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AutoCellFactory/AutoCellFactory.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AutoCellFactory;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,36 +616,6 @@
 			};
 			name = Release;
 		};
-		B8F6B6F8643A7CAA2D304E1B0AD4FDF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1473CB8DFAC4F7F8C0CBFE08EE0BA16 /* AutoCellFactory.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AutoCellFactory/AutoCellFactory-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AutoCellFactory/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AutoCellFactory/AutoCellFactory.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AutoCellFactory;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -645,6 +661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E4ED5E36C96FEB59EBBA83A775FBDAF /* Build configuration list for PBXNativeTarget "AutoCellFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA6C9AEB95100CED66BCE689B21E849 /* Debug */,
+				911DD2BA178551D2DB1C38CB79CAD2E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -659,15 +684,6 @@
 			buildConfigurations = (
 				913B50EB2C0B4F9B2D562C9DEBCFA654 /* Debug */,
 				87C8B3399A15509D84893670FAED385D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E9419243EA42CDEEB14FED37CF6115F3 /* Build configuration list for PBXNativeTarget "AutoCellFactory" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B8F6B6F8643A7CAA2D304E1B0AD4FDF3 /* Debug */,
-				057482A5ADB37062B7887615C6C68A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
