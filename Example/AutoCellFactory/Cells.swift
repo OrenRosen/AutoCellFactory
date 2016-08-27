@@ -19,6 +19,10 @@ class SomeCell: AWBasicCell<SomeCellPresenter> {
         super.awakeFromNib()
     }
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
     override func configureCell() {
         
         label.text = presenter.title
@@ -27,6 +31,15 @@ class SomeCell: AWBasicCell<SomeCellPresenter> {
 
 class AnotherCell: AWBasicCell<AnotherCellPresenter> {
     @IBOutlet weak var label: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+
     
     override func configureCell() {
         label.text = presenter.title
