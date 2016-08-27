@@ -30,14 +30,21 @@ public class AWBasicCell<PresenterType: AnyObject where PresenterType: AWCellPre
     
     override public func awakeFromNib() {
         super.awakeFromNib()
+        setup()
+    }
+    
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setup()
+    }
+    
+    public func configureCell() { }
+    
+    private func setup() {
         presenter = PresenterType()
         presenter.reloadView = { [weak self] in
             self?.configureCell()
         }
-    }
-    
-    public func configureCell() {
-    
     }
 }
 

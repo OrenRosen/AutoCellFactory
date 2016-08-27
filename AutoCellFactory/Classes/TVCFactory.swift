@@ -37,6 +37,7 @@ public class TVCFactory {
             cellTypes.append(regitrationTuple.cellType)
             let reuseIdentifier = regitrationTuple.cellType.defaultReuseIdentifier
             tableView.registerNib(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+            tableView.registerClass(regitrationTuple.cellType, forCellReuseIdentifier: regitrationTuple.cellType.defaultReuseIdentifier)
             modelNameToCellType[stringFromModel(regitrationTuple.modelType)] = regitrationTuple.cellType
         }
         initMiniFactories()
