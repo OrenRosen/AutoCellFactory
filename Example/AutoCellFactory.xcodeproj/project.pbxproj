@@ -42,6 +42,7 @@
 		1E1A4A4B1D5F56C30097CABA /* SomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SomeCell.xib; sourceTree = "<group>"; };
 		1E1A4A4C1D5F56C30097CABA /* AnotherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnotherCell.xib; sourceTree = "<group>"; };
 		1E1A4A4F1D5F56D00097CABA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1E6F65CC1D74A825008FE817 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		1EF72CA21D71CFA5003BBDB0 /* SomeTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SomeTestCell.xib; sourceTree = "<group>"; };
 		30CAD24E8D9A749EEA920642 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		349399E3B621CEE4C02EC576 /* Pods_AutoCellFactory_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCellFactory_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +96,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				1E6F65CC1D74A825008FE817 /* MyPlayground.playground */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for AutoCellFactory */,
 				607FACE81AFB9204008FA782 /* Tests */,

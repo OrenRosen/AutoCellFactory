@@ -3,7 +3,13 @@ import XCTest
 import AutoCellFactory
 @testable import AutoCellFactory_Example
 
-var cells: [UITableViewCell.Type] = [SomeTestCell.self, SomeTestCell.self, AnotherTestCell.self]
+var expectedSomeCellIndexes = [2]
+var expectedAnotherCellIndexes = [0,1]
+var dataSource: [Any] = [
+    AnotherModel(anotherName: "someAnotherModel"),
+    AnotherModel(anotherName: "anotherAnotherModel"),
+    SomeModel(someName: "someSomeModel")
+]
 
 class FakeTableView: UITableView {
     
@@ -19,10 +25,12 @@ class FakeTableView: UITableView {
 
 struct SomeModel {
     var someName = ""
+    init(someName: String) { self.someName = someName }
 }
 
 struct AnotherModel {
-    var anotherName = ""
+    var anotherName: String!
+    init(anotherName: String) { self.anotherName = anotherName }
 }
 
 class SomeTestCellViewModel: AWBasePresenter<SomeModel> {
@@ -62,15 +70,6 @@ class AnotherTestCell: AWBasicCell<AnotherTestCellViewModel> {
 
 class ViewModel: NSObject, TVCFactoryViewModelable, UITableViewDelegate, UITableViewDataSource {
     
-    var dataSource: [Any] = []
-    
-    override init() {
-        super.init()
-        cells.forEach { (klass) in
-            (klass == SomeTestCell.self) ? dataSource.append(SomeModel()) : dataSource.append(AnotherModel())
-        }
-    }
-    
     func modelForIndexPath(indexPath: NSIndexPath) -> Any? {
         return dataSource[indexPath.row]
     }
@@ -84,7 +83,7 @@ class ViewModel: NSObject, TVCFactoryViewModelable, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let reuseIdentifier = cells[indexPath.row] == SomeTestCell.self ? "SomeTestCell" : "AnotherTestCell"
+        let reuseIdentifier = dataSource[indexPath.row] is SomeModel ? "SomeTestCell" : "AnotherTestCell"
         return tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
     }
 }
@@ -112,45 +111,87 @@ class Tests: XCTestCase {
         tableView.wasAnotherTestCalled = false
     }
     
-    func testCalledDeque() {
-        for (index, klass) in cells.enumerate() {
-            cellCalledTestForClass(klass, index: NSIndexPath(forRow: index, inSection: 0))
-        }
+    func testSomeCellsDequed() {
+        expectedSomeCellIndexes.forEach(testSomeCellsDequedAtIndex)
     }
     
-    func cellCalledTestForClass(klass: UITableViewCell.Type, index: NSIndexPath) {
-        tableView.wasSomeTestCalled = false
-        tableView.wasAnotherTestCalled = false
-        tvFactory.getCell(forIndexPath: index)
-        let needTrue = klass == SomeTestCell.self ? tableView.wasSomeTestCalled : tableView.wasAnotherTestCalled
-        let needFalse = klass == SomeTestCell.self ? tableView.wasAnotherTestCalled : tableView.wasSomeTestCalled
-        XCTAssertTrue(needTrue)
-        XCTAssertFalse(needFalse)
+    func testAnotherCellsDequed() {
+        expectedAnotherCellIndexes.forEach(testAnotherCellsDequedAtIndex)
     }
     
     func testConfigureCellIsCalledFromNib() {
-        for (index, klass) in cells.enumerate() where klass == SomeTestCell.self {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            let cell = tvFactory.getCell(forIndexPath: indexPath) as! SomeTestCell
-            XCTAssertTrue(cell.wasCalled)
-        }
+        expectedSomeCellIndexes.forEach(testConfigureCellIsCalledFromNibAtIndex)
     }
-    
+
     func testInstantiateFromNib() {
-        for (index, klass) in cells.enumerate() where klass == SomeTestCell.self {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            let cell = tvFactory.getCell(forIndexPath: indexPath) as! SomeTestCell
-            XCTAssertNotNil(cell.label)
-        }
+        expectedSomeCellIndexes.forEach(testInstantiateFromNibAtIndex)
     }
     
     func testConfigureCellCalledWhenInstantiated() {
-        for (index, klass) in cells.enumerate() where klass == AnotherTestCell.self {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            let cell = tvFactory.getCell(forIndexPath: indexPath) as! AnotherTestCell
-            XCTAssertTrue(cell.wasCalled)
-        }
+        expectedAnotherCellIndexes.forEach(testConfigureCellCalledWhenInstantiatedAtIndex)
     }
+    
+    func testSomeCellsPresenter() {
+        expectedSomeCellIndexes.forEach(testSomeCellsPresenterAtIndex)
+    }
+    
+    func testAnotherCellsPresenters() {
+        expectedAnotherCellIndexes.forEach(testAnotherCellsPresentersAtIndex)
+    }
+    
+    func testSomeCellsDequedAtIndex(index: Int) {
+        tableView.wasSomeTestCalled = false
+        tableView.wasAnotherTestCalled = false
+        tvFactory.getCell(forIndexPath: NSIndexPath(forRow: index, inSection: 0))
+        XCTAssertTrue(tableView.wasSomeTestCalled)
+        XCTAssertFalse(tableView.wasAnotherTestCalled)
+    }
+    
+    func testAnotherCellsDequedAtIndex(index: Int) {
+        tableView.wasSomeTestCalled = false
+        tableView.wasAnotherTestCalled = false
+        tvFactory.getCell(forIndexPath: NSIndexPath(forRow: index, inSection: 0))
+        XCTAssertTrue(tableView.wasAnotherTestCalled)
+        XCTAssertFalse(tableView.wasSomeTestCalled)
+    }
+    
+    func testConfigureCellIsCalledFromNibAtIndex(index: Int) {
+        let cell = someTestCellAtIndex(index)
+        XCTAssertTrue(cell.wasCalled)
+    }
+    
+    func testInstantiateFromNibAtIndex(index: Int) {
+        let cell = someTestCellAtIndex(index)
+        XCTAssertNotNil(cell.label)
+    }
+    
+    func testConfigureCellCalledWhenInstantiatedAtIndex(index: Int) {
+        let cell = anotherTestCellAtIndex(index)
+        XCTAssertTrue(cell.wasCalled)
+    }
+    
+    func testAnotherCellsPresentersAtIndex(index: Int) {
+        let cell = anotherTestCellAtIndex(index)
+        let model = dataSource[index] as! AnotherModel
+        XCTAssertEqual(cell.presenter.model!.anotherName, model.anotherName)
+    }
+    
+    func testSomeCellsPresenterAtIndex(index: Int) {
+        let cell = someTestCellAtIndex(index)
+        let model = dataSource[index] as! SomeModel
+        XCTAssertEqual(cell.presenter.model!.someName, model.someName)
+    }
+
+    func someTestCellAtIndex(index: Int) -> SomeTestCell {
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        return tvFactory.getCell(forIndexPath: indexPath) as! SomeTestCell
+    }
+    
+    func anotherTestCellAtIndex(index: Int) -> AnotherTestCell {
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        return tvFactory.getCell(forIndexPath: indexPath) as! AnotherTestCell
+    }
+
 }
 
 
