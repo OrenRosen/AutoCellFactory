@@ -49,6 +49,7 @@ public class ACFactory {
             tableView.registerClass(regitrationTuple.cellType, forCellReuseIdentifier: regitrationTuple.cellType.defaultReuseIdentifier)
             modelNameToCellType[stringFromModel(regitrationTuple.modelType)] = regitrationTuple.cellType
         }
+        
         initMiniFactories()
     }
     
