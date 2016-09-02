@@ -1,6 +1,6 @@
 //
-//  TVCFactory.swift
-//  AWCellFactory
+//  ACFactory.swift
+//  AotoCellCellFactory
 //
 //  Created by Oren Rosenblum on 8/8/16.
 //  Copyright © 2016 Oren Rosenblum. All rights reserved.
@@ -9,29 +9,29 @@
 import Foundation
 import UIKit
 
-public protocol TVCFactoryViewModelable {
+public protocol ACFactoryViewModelable {
     func modelForIndexPath(indexPath: NSIndexPath) -> Any?
 }
 
-protocol TVCFactoryCellDelegate {
-    func getSupportingCells() -> [AWBasicCellPresenterHolder.Type]
+protocol ACFactoryCellDelegate {
+    func getSupportingCells() -> [ACBasicCellPresenterHolder.Type]
 }
 
-public class TVCFactory {
+public class ACFactory {
     
-    var delegate: TVCFactoryViewModelable
-    public typealias TVCFactoryRegistrationType = (cellType: AWBasicCellPresenterHolder.Type, modelType: Any.Type)
+    var delegate: ACFactoryViewModelable
+    public typealias ACFactoryRegistrationType = (cellType: ACBasicCellPresenterHolder.Type, modelType: Any.Type)
     
     weak var tableView: UITableView?
-    private var cellTypes: [AWBasicCellPresenterHolder.Type] = []
+    private var cellTypes: [ACBasicCellPresenterHolder.Type] = []
     private var reuseIdentifierToFactories: [String : TVCMiniFactory] = [:]
-    private var modelNameToCellType: [String : AWBasicCellPresenterHolder.Type] = [:]
+    private var modelNameToCellType: [String : ACBasicCellPresenterHolder.Type] = [:]
 
-    public init(delegate: TVCFactoryViewModelable) {
+    public init(delegate: ACFactoryViewModelable) {
         self.delegate = delegate
     }
     
-    public func register(tableView tableView: UITableView, cellsAndModels: [TVCFactoryRegistrationType]) {
+    public func register(tableView tableView: UITableView, cellsAndModels: [ACFactoryRegistrationType]) {
         self.tableView = tableView
         cellsAndModels.forEach { (regitrationTuple) in
             cellTypes.append(regitrationTuple.cellType)
@@ -42,7 +42,7 @@ public class TVCFactory {
         initMiniFactories()
     }
     
-    public func registerWithClass(tableView tableView: UITableView, cellsAndModels: [TVCFactoryRegistrationType]) {
+    public func registerWithClass(tableView tableView: UITableView, cellsAndModels: [ACFactoryRegistrationType]) {
         self.tableView = tableView
         cellsAndModels.forEach { (regitrationTuple) in
             cellTypes.append(regitrationTuple.cellType)
@@ -86,11 +86,11 @@ public class TVCFactory {
 
 private class TVCMiniFactory {
     
-    var viewModelable: TVCFactoryViewModelable
+    var viewModelable: ACFactoryViewModelable
 
     var reuseIdentifier: String
     
-    init(reuseIdentifier: String, viewModelable: TVCFactoryViewModelable) {
+    init(reuseIdentifier: String, viewModelable: ACFactoryViewModelable) {
         self.reuseIdentifier = reuseIdentifier
         self.viewModelable = viewModelable
     }
@@ -99,7 +99,7 @@ private class TVCMiniFactory {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
         setWidth(cell, tableView.frame.width)
         cell.layoutIfNeeded()
-        (cell as? AWBasicCellPresenterHolder)?.somePresenter?.someModel = viewModelable.modelForIndexPath(indexPath)
+        (cell as? ACBasicCellPresenterHolder)?.somePresenter?.someModel = viewModelable.modelForIndexPath(indexPath)
         return cell
     }
     

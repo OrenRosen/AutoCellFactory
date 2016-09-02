@@ -33,17 +33,17 @@ struct AnotherModel {
     init(anotherName: String) { self.anotherName = anotherName }
 }
 
-class SomeTestCellViewModel: AWBasePresenter<SomeModel> {
+class SomeTestCellViewModel: ACBasePresenter<SomeModel> {
     required init() {}
     var someTitle: String { return model?.someName ?? "" }
 }
 
-class AnotherTestCellViewModel: AWBasePresenter<AnotherModel> {
+class AnotherTestCellViewModel: ACBasePresenter<AnotherModel> {
     required init() {}
     var anotherTitle: String { return model?.anotherName ?? "" }
 }
 
-class SomeTestCell: AWBasicCell<SomeTestCellViewModel> {
+class SomeTestCell: ACBasicCell<SomeTestCellViewModel> {
     
     @IBOutlet weak var label: UILabel!
     
@@ -59,7 +59,7 @@ class SomeTestCell: AWBasicCell<SomeTestCellViewModel> {
     }
 }
 
-class AnotherTestCell: AWBasicCell<AnotherTestCellViewModel> {
+class AnotherTestCell: ACBasicCell<AnotherTestCellViewModel> {
     
     var wasCalled = false
     
@@ -68,7 +68,7 @@ class AnotherTestCell: AWBasicCell<AnotherTestCellViewModel> {
     }
 }
 
-class ViewModel: NSObject, TVCFactoryViewModelable, UITableViewDelegate, UITableViewDataSource {
+class ViewModel: NSObject, ACFactoryViewModelable, UITableViewDelegate, UITableViewDataSource {
     
     func modelForIndexPath(indexPath: NSIndexPath) -> Any? {
         return dataSource[indexPath.row]
@@ -90,7 +90,7 @@ class ViewModel: NSObject, TVCFactoryViewModelable, UITableViewDelegate, UITable
 
 class Tests: XCTestCase {
     
-    var tvFactory: TVCFactory!
+    var tvFactory: ACFactory!
     var viewModel = ViewModel()
     var tableView = FakeTableView()
     
@@ -98,7 +98,7 @@ class Tests: XCTestCase {
         super.setUp()
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
-        tvFactory = TVCFactory(delegate: viewModel)
+        tvFactory = ACFactory(delegate: viewModel)
         tvFactory.register(tableView: tableView, cellsAndModels: [
             (SomeTestCell.self, SomeModel.self),
             ])
@@ -193,12 +193,3 @@ class Tests: XCTestCase {
     }
 
 }
-
-
-
-
-
-
-
-
-

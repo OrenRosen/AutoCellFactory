@@ -1,6 +1,6 @@
 //
 //  CellReuseRegister.swift
-//  AWCellFactory
+//  AotoCellCellFactory
 //
 //  Created by Oren Rosenblum on 8/8/16.
 //  Copyright © 2016 Oren Rosenblum. All rights reserved.

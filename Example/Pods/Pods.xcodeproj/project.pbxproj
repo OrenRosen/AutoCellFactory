@@ -11,7 +11,7 @@
 		2D77FDB03951E380F813187933D7665B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		30A5D9197C1B28E87CFC486D45E0C5C1 /* Pods-AutoCellFactory_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C06622008EE9DAC03ADD5F666EE769 /* Pods-AutoCellFactory_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		314C8FBA77994B370B76485239E83119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		4EE510AEF5C3A8D993606A66D627B8B0 /* TVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */; };
+		4EE510AEF5C3A8D993606A66D627B8B0 /* ACFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F108627A19B46C10199AFAFC503BE4 /* ACFactory.swift */; };
 		5988AB3F2D738181C878F2E9581FEF51 /* CellReuseRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD749BD832EF3D497010D9FD2EA84F8A /* CellReuseRegister.swift */; };
 		8820376448E01266EBF5B0A6AD32DB98 /* AutoCellFactoryTestingPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2914DECB839F3A8EC8EF70F178A6A9EE /* AutoCellFactoryTestingPod.swift */; };
 		9F5DECCBB85C09B8804C40C10349361E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2B3C0DB668F3ED557F47791FA647D /* BasePresenter.swift */; };
@@ -41,7 +41,7 @@
 		44C5B275E1FCA08A56A0F64AFC5B2532 /* Pods_AutoCellFactory_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoCellFactory_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8D3C8BF4D4A66C303020E1E5B8C8AC /* Pods-AutoCellFactory_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AutoCellFactory_Example-frameworks.sh"; sourceTree = "<group>"; };
 		59C4E402809178C3EE7ED3D1611940C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TVCFactory.swift; sourceTree = "<group>"; };
+		59F108627A19B46C10199AFAFC503BE4 /* ACFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ACFactory.swift; sourceTree = "<group>"; };
 		5C1EA223B405E0682AE5C190D3A9FDE5 /* AutoCellFactory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AutoCellFactory-prefix.pch"; sourceTree = "<group>"; };
 		63C06622008EE9DAC03ADD5F666EE769 /* Pods-AutoCellFactory_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AutoCellFactory_Example-umbrella.h"; sourceTree = "<group>"; };
 		84C3345DA9DF50A82EEEC43B7A3C1719 /* AutoCellFactory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AutoCellFactory-dummy.m"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				9D2B6EA2415EF568B0CCE2CDE6C57408 /* BaseCell.swift */,
 				D8D2B3C0DB668F3ED557F47791FA647D /* BasePresenter.swift */,
 				BD749BD832EF3D497010D9FD2EA84F8A /* CellReuseRegister.swift */,
-				59F108627A19B46C10199AFAFC503BE4 /* TVCFactory.swift */,
+				59F108627A19B46C10199AFAFC503BE4 /* ACFactory.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 				DF5D6C92CDCA4B92BB5D9CC2746C7E34 /* BaseCell.swift in Sources */,
 				9F5DECCBB85C09B8804C40C10349361E /* BasePresenter.swift in Sources */,
 				5988AB3F2D738181C878F2E9581FEF51 /* CellReuseRegister.swift in Sources */,
-				4EE510AEF5C3A8D993606A66D627B8B0 /* TVCFactory.swift in Sources */,
+				4EE510AEF5C3A8D993606A66D627B8B0 /* ACFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  AWCellPresentable.swift
-//  AWCellFactory
+//  AotoCellCellFactory
 //
 //  Created by Oren Rosenblum on 8/8/16.
 //  Copyright © 2016 Oren Rosenblum. All rights reserved.
@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-public class AWBasicCellPresenterHolder: UITableViewCell, AWPresenterHolder {
+public class ACBasicCellPresenterHolder: UITableViewCell, AWPresenterHolder {
     var somePresenter: AWModelHolder? {
         get { return nil }
         set(newPresenter) { }
     }
 }
 
-public class AWBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : AWBasicCellPresenterHolder, AWCellPresentable {
+public class ACBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : ACBasicCellPresenterHolder, AWCellPresentable {
     
     public var presenter: PresenterType!
     override var somePresenter: AWModelHolder? {
