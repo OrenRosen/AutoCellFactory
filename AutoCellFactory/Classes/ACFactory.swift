@@ -46,7 +46,6 @@ public class ACFactory {
         self.tableView = tableView
         cellsAndModels.forEach { (regitrationTuple) in
             cellTypes.append(regitrationTuple.cellType)
-            let reuseIdentifier = regitrationTuple.cellType.defaultReuseIdentifier
             tableView.registerClass(regitrationTuple.cellType, forCellReuseIdentifier: regitrationTuple.cellType.defaultReuseIdentifier)
             modelNameToCellType[stringFromModel(regitrationTuple.modelType)] = regitrationTuple.cellType
         }
