@@ -23,20 +23,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "AutoCellFactory_Tests.xctest"
-               BlueprintName = "AutoCellFactory_Tests"
-               ReferencedContainer = "container:AutoCellFactory.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForAnalyzing = "YES">
@@ -46,6 +32,20 @@
                BuildableName = "AutoCellFactory.framework"
                BlueprintName = "AutoCellFactory"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "AutoCellFactory_Tests.xctest"
+               BlueprintName = "AutoCellFactory_Tests"
+               ReferencedContainer = "container:AutoCellFactory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

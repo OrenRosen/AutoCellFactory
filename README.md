@@ -1,6 +1,6 @@
 # AutoCellFactory
 
-[![CI Status](http://img.shields.io/travis/Oren Rosenblum/AutoCellFactory.svg?style=flat)](https://travis-ci.org/Oren Rosenblum/AutoCellFactory)
+[![CI Status](http://img.shields.io/travis/OrenRosen/AutoCellFactory.svg?style=flat)](https://travis-ci.org/OrenRosen/AutoCellFactory)
 [![Version](https://img.shields.io/cocoapods/v/AutoCellFactory.svg?style=flat)](http://cocoapods.org/pods/AutoCellFactory)
 [![License](https://img.shields.io/cocoapods/l/AutoCellFactory.svg?style=flat)](http://cocoapods.org/pods/AutoCellFactory)
 [![Platform](https://img.shields.io/cocoapods/p/AutoCellFactory.svg?style=flat)](http://cocoapods.org/pods/AutoCellFactory)
