@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class ACBasePresenter<ModelType: Any>: AWCellPresenterer {
+public class ACBasePresenter<ModelType: Any>: AutoCellPresenterer {
     
     required public init() { }
     
@@ -32,7 +32,7 @@ public class ACBasePresenter<ModelType: Any>: AWCellPresenterer {
 }
 
 
-public protocol AWCellPresenterer: ACModelHolder {
+public protocol AutoCellPresenterer: ACModelHolder {
     associatedtype ModelType
     var model: ModelType? { get set }
     var reloadView: (() -> ())? { get set }

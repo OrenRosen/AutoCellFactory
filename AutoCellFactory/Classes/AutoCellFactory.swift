@@ -9,22 +9,9 @@
 import Foundation
 import UIKit
 
-protocol ACReusableView {
-    static var defaultReuseIdentifier: String { get }
-}
-
-extension ACReusableView where Self: UIView {
-    static var defaultReuseIdentifier: String {
-        return NSStringFromClass(self).componentsSeparatedByString(".").last!
-    }
-}
 
 public protocol AutoCellFactoryViewModelable {
     func modelForIndexPath(indexPath: NSIndexPath) -> Any?
-}
-
-protocol AutoCellFactoryCellDelegate {
-    func getSupportingCells() -> [ACBasicCellPresenterHolder.Type]
 }
 
 public class AutoCellFactory {
@@ -71,9 +58,11 @@ public class AutoCellFactory {
     // Private 
     
     private func initMiniFactories() {
-        cellTypes.forEach { (cellType) in
-            self.reuseIdentifierToFactories[cellType.defaultReuseIdentifier] = TVCMiniFactory(reuseIdentifier: cellType.defaultReuseIdentifier, viewModelable: self.delegate)
-        }
+        cellTypes.forEach(initMiniFactoryWithCellType)
+    }
+    
+    private func initMiniFactoryWithCellType(cellType: ACBasicCellPresenterHolder.Type) {
+        self.reuseIdentifierToFactories[cellType.defaultReuseIdentifier] = TVCMiniFactory(reuseIdentifier: cellType.defaultReuseIdentifier, viewModelable: self.delegate)
     }
     
     private func getMiniFactoryForIndexPath(indexPath: NSIndexPath) -> TVCMiniFactory {

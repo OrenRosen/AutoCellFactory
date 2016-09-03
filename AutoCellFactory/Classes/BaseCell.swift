@@ -20,7 +20,7 @@ public class ACBasicCellPresenterHolder: UITableViewCell, ACPresenterHolder, ACR
     }
 }
 
-public class ACBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : ACBasicCellPresenterHolder {
+public class ACBasicCell<PresenterType: AnyObject where PresenterType: AutoCellPresenterer> : ACBasicCellPresenterHolder {
     
     public var presenter: PresenterType!
     override var acPresenterPlaceHolder: ACModelHolder? {
@@ -67,3 +67,15 @@ extension ACPresenterHolder {
         set(newPresenter) { }
     }
 }
+
+protocol ACReusableView {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension ACReusableView where Self: UIView {
+    static var defaultReuseIdentifier: String {
+        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+    }
+}
+
+
