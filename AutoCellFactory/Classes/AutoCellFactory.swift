@@ -1,5 +1,5 @@
 //
-//  ACFactory.swift
+//  AutoCellFactory.swift
 //  AotoCellCellFactory
 //
 //  Created by Oren Rosenblum on 8/8/16.
@@ -9,44 +9,43 @@
 import Foundation
 import UIKit
 
-public protocol ACFactoryViewModelable {
+public protocol AutoCellFactoryViewModelable {
     func modelForIndexPath(indexPath: NSIndexPath) -> Any?
 }
 
-protocol ACFactoryCellDelegate {
+protocol AutoCellFactoryCellDelegate {
     func getSupportingCells() -> [ACBasicCellPresenterHolder.Type]
 }
 
-public class ACFactory {
+public class AutoCellFactory {
     
-    var delegate: ACFactoryViewModelable
-    public typealias ACFactoryRegistrationType = (cellType: ACBasicCellPresenterHolder.Type, modelType: Any.Type)
+    var delegate: AutoCellFactoryViewModelable
+    public typealias AutoCellFactoryRegistrationType = (cellType: ACBasicCellPresenterHolder.Type, modelType: Any.Type)
     
-    weak var tableView: UITableView?
+    weak var tableView: UITableView!
     private var cellTypes: [ACBasicCellPresenterHolder.Type] = []
     private var reuseIdentifierToFactories: [String : TVCMiniFactory] = [:]
     private var modelNameToCellType: [String : ACBasicCellPresenterHolder.Type] = [:]
 
-    public init(delegate: ACFactoryViewModelable) {
+    public init(tableView: UITableView, delegate: AutoCellFactoryViewModelable) {
+        self.tableView = tableView
         self.delegate = delegate
     }
     
-    public func register(tableView tableView: UITableView, cellsAndModels: [ACFactoryRegistrationType]) {
-        self.tableView = tableView
+    public func registerForNib(cellsAndModels: [AutoCellFactoryRegistrationType]) {
         cellsAndModels.forEach { (regitrationTuple) in
             cellTypes.append(regitrationTuple.cellType)
             let reuseIdentifier = regitrationTuple.cellType.defaultReuseIdentifier
-            tableView.registerNib(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+            self.tableView.registerNib(UINib(nibName: reuseIdentifier, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
             modelNameToCellType[stringFromModel(regitrationTuple.modelType)] = regitrationTuple.cellType
         }
         initMiniFactories()
     }
     
-    public func registerWithClass(tableView tableView: UITableView, cellsAndModels: [ACFactoryRegistrationType]) {
-        self.tableView = tableView
+    public func registerForClass(cellsAndModels: [AutoCellFactoryRegistrationType]) {
         cellsAndModels.forEach { (regitrationTuple) in
             cellTypes.append(regitrationTuple.cellType)
-            tableView.registerClass(regitrationTuple.cellType, forCellReuseIdentifier: regitrationTuple.cellType.defaultReuseIdentifier)
+            self.tableView.registerClass(regitrationTuple.cellType, forCellReuseIdentifier: regitrationTuple.cellType.defaultReuseIdentifier)
             modelNameToCellType[stringFromModel(regitrationTuple.modelType)] = regitrationTuple.cellType
         }
         
@@ -86,11 +85,11 @@ public class ACFactory {
 
 private class TVCMiniFactory {
     
-    var viewModelable: ACFactoryViewModelable
+    var viewModelable: AutoCellFactoryViewModelable
 
     var reuseIdentifier: String
     
-    init(reuseIdentifier: String, viewModelable: ACFactoryViewModelable) {
+    init(reuseIdentifier: String, viewModelable: AutoCellFactoryViewModelable) {
         self.reuseIdentifier = reuseIdentifier
         self.viewModelable = viewModelable
     }

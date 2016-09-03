@@ -68,7 +68,7 @@ class AnotherTestCell: ACBasicCell<AnotherTestCellViewModel> {
     }
 }
 
-class ViewModel: NSObject, ACFactoryViewModelable, UITableViewDelegate, UITableViewDataSource {
+class ViewModel: NSObject, AutoCellFactoryViewModelable, UITableViewDelegate, UITableViewDataSource {
     
     func modelForIndexPath(indexPath: NSIndexPath) -> Any? {
         return dataSource[indexPath.row]
@@ -90,7 +90,7 @@ class ViewModel: NSObject, ACFactoryViewModelable, UITableViewDelegate, UITableV
 
 class Tests: XCTestCase {
     
-    var tvFactory: ACFactory!
+    var tvFactory: AutoCellFactory!
     var viewModel = ViewModel()
     var tableView = FakeTableView()
     
@@ -98,11 +98,9 @@ class Tests: XCTestCase {
         super.setUp()
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
-        tvFactory = ACFactory(delegate: viewModel)
-        tvFactory.register(tableView: tableView, cellsAndModels: [
-            (SomeTestCell.self, SomeModel.self),
-            ])
-        tvFactory.registerWithClass(tableView: tableView, cellsAndModels: [(AnotherTestCell.self, AnotherModel.self)])
+        tvFactory = AutoCellFactory(tableView: tableView, delegate: viewModel)
+        tvFactory.registerForNib([(SomeTestCell.self, SomeModel.self)])
+        tvFactory.registerForClass([(AnotherTestCell.self, AnotherModel.self)])
     }
     
     override func tearDown() {
