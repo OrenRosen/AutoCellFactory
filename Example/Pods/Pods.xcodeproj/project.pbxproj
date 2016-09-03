@@ -13,7 +13,6 @@
 		314C8FBA77994B370B76485239E83119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		58CED3F34CA6B373E25A19A0DE062D68 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108A02BCD7345535B540CE26E8F8703C /* BaseCell.swift */; };
 		92458CAA3802E980BE14B8994B9E88C1 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E597253BCB8AF9083CDF77D8AF939 /* BasePresenter.swift */; };
-		A982AEE15916945293CDED450EBFFFDA /* CellReuseRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533B8995143BE983DCB8E8050655212 /* CellReuseRegister.swift */; };
 		AF2BC88BE4B53ABE7BA9F8178B15DE58 /* AutoCellFactory-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5933CEC268F6FE2CBB7CABF50AC987E /* AutoCellFactory-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB208B86B1DD40843F9D92702FE6D065 /* AutoCellFactoryTestingPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5A1D063E551ADFDB9A756565EC67DA /* AutoCellFactoryTestingPod.swift */; };
 		E493E407BC8E8716A228792F1F8CA0AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -47,7 +46,6 @@
 		84C3345DA9DF50A82EEEC43B7A3C1719 /* AutoCellFactory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AutoCellFactory-dummy.m"; sourceTree = "<group>"; };
 		8FBDDD9398B465D9291949E862E5271A /* Pods-AutoCellFactory_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AutoCellFactory_Tests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A533B8995143BE983DCB8E8050655212 /* CellReuseRegister.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CellReuseRegister.swift; sourceTree = "<group>"; };
 		AAA56666E9C470A807C7644CAB3E0FDA /* Pods-AutoCellFactory_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AutoCellFactory_Example.modulemap"; sourceTree = "<group>"; };
 		ABC5C174E6E84843AA8B076E4365253C /* Pods-AutoCellFactory_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AutoCellFactory_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AD25CBAC72F5C1B47749AC53F3EA2F9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				CB5A1D063E551ADFDB9A756565EC67DA /* AutoCellFactoryTestingPod.swift */,
 				108A02BCD7345535B540CE26E8F8703C /* BaseCell.swift */,
 				7A0E597253BCB8AF9083CDF77D8AF939 /* BasePresenter.swift */,
-				A533B8995143BE983DCB8E8050655212 /* CellReuseRegister.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -370,7 +367,6 @@
 				CB208B86B1DD40843F9D92702FE6D065 /* AutoCellFactoryTestingPod.swift in Sources */,
 				58CED3F34CA6B373E25A19A0DE062D68 /* BaseCell.swift in Sources */,
 				92458CAA3802E980BE14B8994B9E88C1 /* BasePresenter.swift in Sources */,
-				A982AEE15916945293CDED450EBFFFDA /* CellReuseRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

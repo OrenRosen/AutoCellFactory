@@ -9,6 +9,16 @@
 import Foundation
 import UIKit
 
+protocol ACReusableView {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension ACReusableView where Self: UIView {
+    static var defaultReuseIdentifier: String {
+        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+    }
+}
+
 public protocol AutoCellFactoryViewModelable {
     func modelForIndexPath(indexPath: NSIndexPath) -> Any?
 }
@@ -98,7 +108,7 @@ private class TVCMiniFactory {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
         setWidth(cell, tableView.frame.width)
         cell.layoutIfNeeded()
-        (cell as? ACBasicCellPresenterHolder)?.somePresenter?.someModel = viewModelable.modelForIndexPath(indexPath)
+        (cell as? ACBasicCellPresenterHolder)?.acPresenterPlaceHolder?.acModelPlaceHolder = viewModelable.modelForIndexPath(indexPath)
         return cell
     }
     

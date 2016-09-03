@@ -15,7 +15,7 @@ public class ACBasePresenter<ModelType: Any>: AWCellPresenterer {
     
     public var reloadView: (() -> ())?
     
-    public var someModel: Any? {
+    public var acModelPlaceHolder: Any? {
         get {
             return model
         }
@@ -32,7 +32,7 @@ public class ACBasePresenter<ModelType: Any>: AWCellPresenterer {
 }
 
 
-public protocol AWCellPresenterer: AWModelHolder {
+public protocol AWCellPresenterer: ACModelHolder {
     associatedtype ModelType
     var model: ModelType? { get set }
     var reloadView: (() -> ())? { get set }

@@ -1,5 +1,5 @@
 //
-//  AWCellPresentable.swift
+//  BaseCell.swift
 //  AotoCellCellFactory
 //
 //  Created by Oren Rosenblum on 8/8/16.
@@ -9,17 +9,21 @@
 import Foundation
 import UIKit
 
-public class ACBasicCellPresenterHolder: UITableViewCell, AWPresenterHolder {
-    var somePresenter: AWModelHolder? {
+public class ACBasicCellPresenterHolder: UITableViewCell, ACPresenterHolder, ACReusableView {
+    var acPresenterPlaceHolder: ACModelHolder? {
         get { return nil }
         set(newPresenter) { }
     }
+    
+    public func getPresenter() -> ACModelHolder? {
+        return acPresenterPlaceHolder
+    }
 }
 
-public class ACBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : ACBasicCellPresenterHolder, AWCellPresentable {
+public class ACBasicCell<PresenterType: AnyObject where PresenterType: AWCellPresenterer> : ACBasicCellPresenterHolder {
     
     public var presenter: PresenterType!
-    override var somePresenter: AWModelHolder? {
+    override var acPresenterPlaceHolder: ACModelHolder? {
         get {
             return presenter
         }
@@ -49,24 +53,17 @@ public class ACBasicCell<PresenterType: AnyObject where PresenterType: AWCellPre
 }
 
 
-public protocol AWModelHolder {
-    var someModel: Any? { get set }
+public protocol ACModelHolder {
+    var acModelPlaceHolder: Any? { get set }
 }
 
-protocol AWPresenterHolder: class {
-    var somePresenter: AWModelHolder? { get set }
+protocol ACPresenterHolder: class {
+    var acPresenterPlaceHolder: ACModelHolder? { get set }
 }
 
-extension AWPresenterHolder {
-    var somePresenter: AWModelHolder? {
+extension ACPresenterHolder {
+    var acPresenterPlaceHolder: ACModelHolder? {
         get { return nil }
         set(newPresenter) { }
     }
-}
-
-
-protocol AWCellPresentable {
-    associatedtype presenterType: AWCellPresenterer
-    func configureCell()
-    var presenter: presenterType! { get set }
 }
