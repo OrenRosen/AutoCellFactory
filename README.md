@@ -85,7 +85,7 @@ Now its only left to actually show the cell using the AutoCellFactory
 create an instance of AutoCellFactory:
 
 ```swift
-lazy var acFactory: AutoCellFactory = AutoCellFactory(delegate: self.viewModel)
+lazy var acFactory: AutoCellFactory = AutoCellFactory(tableView: self.tableView, delegate: self.viewModel)
 ```
 The delegate needs to conforms to `AutoCellFactoryViewDelegate`, and to implement the method:
 ```swift
@@ -95,7 +95,7 @@ func modelForIndexPath(indexPath: NSIndexPath) -> Any?
 Call register method at your `AutoCellFactory` instance:
 
 ```swift
-public func register(tableView tableView: UITableView, cellsAndModels: [AutoCellFactoryRegistrationType])
+public func registerForNib(cellsAndModels: [AutoCellFactoryRegistrationType])
 ```
 
 Pass the tableView, and an array of `AutoCellFactoryRegistrationType`
@@ -106,7 +106,7 @@ public typealias AutoCellFactoryRegistrationType = (cellType: ACBasicCellPresent
 
 This way the factory knows which model belongs to each cell, for example:
 ```swift
-acFactory.register(tableView: tableView, cellsAndModels: [(SomeCell.self, SomeModel.self)])
+acFactory.registerForNib([(SomeCell.self, SomeModel.self)])
 ```
 
 And in `cellForRow`, just return the cell from the acFactory:
